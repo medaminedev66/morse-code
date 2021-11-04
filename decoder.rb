@@ -56,3 +56,10 @@ def decode_char(letter)
     '-'
   end
 end
+
+def decode_word(word)
+  characters = word.split
+  decoded_word = ''
+  characters.each { |char| decoded_word += (decode_char char) }
+  decoded_word
+end

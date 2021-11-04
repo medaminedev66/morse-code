@@ -63,3 +63,12 @@ def decode_word(word)
   characters.each { |char| decoded_word += (decode_char char) }
   decoded_word
 end
+
+def decode(sentence)
+  words = sentence.split('   ')
+  decoded_sentence = ''
+  words.each { |word| decoded_sentence = "#{decoded_sentence}#{decode_word word} " }
+  puts decoded_sentence
+end
+
+decode '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
